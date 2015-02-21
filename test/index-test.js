@@ -62,7 +62,6 @@ describe('Given a triggerback bus', function() {
                 spy1.args[0][0].should.equal(params);
             });
 
-
             it('should call the final callback last.', function() {
                 callbackSpy.callCount.should.equal(1);
             });

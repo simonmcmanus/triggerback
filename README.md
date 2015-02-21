@@ -1,10 +1,10 @@
 #triggerback
 
-Event bus which provides a callback for trigger.
-
-A very simple event bus, main reason for writing was that I wanted to fire a callback after all of the functions bound to the event had completed.
+A very simple event bus whose trigger function accepts a callback.
 
 Think of a mashup between async.parallel and Backbone.events.trigger.
+
+The intentions being to reduce the number of events triggered while still maintaining loose coupling between components.
 
 ##API
 
@@ -14,7 +14,7 @@ Bind a function to an event. Note that the function needs to expect params as th
 
 ###trigger(eventName, params, callback)
 
-Run all functions in parallel bound to the event passing the params as the first param. When all functions are complete the callback will run.
+Run all functions bound to the event in parallel passing the params as the first arg. When all functions are complete fire the callback.
 
 ###off(eventName)
 
@@ -25,8 +25,8 @@ Also there are no tests against .off
 ##Example Usage
 
 ```js
-    var E = require('./index');
-    var bus = new E();
+    var TriggerBack = require('triggerback');
+    var bus = new TriggerBack();
 
     bus.on('bacon', function(params, next) {
         setTimeout(next, 60);
