@@ -20,6 +20,7 @@ module.exports = function (gets, params, callback) {
         }
     };
 
+
     gets.forEach(function(getter) {
         getter(params, buildOutput);
     });
