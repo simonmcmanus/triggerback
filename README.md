@@ -22,6 +22,7 @@ Also there are no tests against .off
 
 #Example Usage
 
+```js
     var E = require('./index');
     var bus = new E();
 
@@ -37,5 +38,4 @@ Also there are no tests against .off
         console.log('90 ms later');
     });
 
-
-
+```js
