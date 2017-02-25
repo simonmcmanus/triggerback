@@ -1,5 +1,7 @@
 #triggerback
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/simonmcmanus/triggerback.svg)](https://greenkeeper.io/)
+
 A very simple event bus whose trigger function accepts a callback.
 
 Think of a mashup between async.parallel and Backbone.events.trigger.
